@@ -1,0 +1,55 @@
+:root {
+  --bg: #f6f7f9; --card: #fff; --text: #1f2933; --muted: #64748b; --line: #e2e8f0;
+  --brand: #0f766e; --brand-dark: #115e59; --accent: #f59e0b; --danger: #b91c1c;
+  --ok-bg: #dcfce7; --wait-bg: #fef3c7; --no-bg: #fee2e2; --done-bg: #dbeafe; --radius: 10px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--brand); }
+.container { max-width: 1080px; margin: 0 auto; padding: 20px 16px 40px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 20px; text-decoration: none; color: var(--text); }
+.logo-mark { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: var(--brand); color: #fff; }
+nav { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 15px; }
+nav a { text-decoration: none; }
+.hero { padding: 26px; border-radius: var(--radius); background: linear-gradient(120deg, #0f766e, #155e75); color: #fff; margin-bottom: 18px; }
+.hero h1 { margin: 0 0 6px; font-size: 26px; }
+.hero p { margin: 0; opacity: .9; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.grid { display: grid; gap: 12px; }
+.filters { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); align-items: end; }
+label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+input, select, textarea { font: inherit; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: var(--text); width: 100%; }
+textarea { min-height: 80px; resize: vertical; }
+button, .btn { font: inherit; cursor: pointer; border: 0; border-radius: 8px; padding: 9px 14px; background: var(--brand); color: #fff; text-decoration: none; display: inline-block; }
+button:hover, .btn:hover { background: var(--brand-dark); }
+button.secondary { background: #e2e8f0; color: var(--text); }
+button.danger { background: var(--danger); }
+button:disabled { opacity: .5; cursor: default; }
+.results { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); margin-top: 16px; }
+.guide-card { display: grid; gap: 8px; }
+.guide-head { display: flex; justify-content: space-between; gap: 8px; align-items: start; }
+.guide-head h3 { margin: 0; font-size: 18px; }
+.muted { color: var(--muted); font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: #f1f5f9; border: 1px solid var(--line); }
+.chip.lang { background: #ecfeff; border-color: #a5f3fc; }
+.score { font-weight: 700; color: var(--brand); white-space: nowrap; }
+.price { font-weight: 700; }
+.stars { color: var(--accent); }
+.row { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.badge { font-size: 12px; padding: 3px 10px; border-radius: 999px; font-weight: 600; }
+.b-beklemede { background: var(--wait-bg); } .b-onaylandi { background: var(--ok-bg); }
+.b-reddedildi, .b-iptal { background: var(--no-bg); } .b-tamamlandi { background: var(--done-bg); }
+.two-col { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+.auth { max-width: 420px; margin: 20px auto; }
+.list { display: grid; gap: 10px; }
+.toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #1f2933; color: #fff; padding: 10px 16px; border-radius: 8px; max-width: 90vw; }
+.toast.error { background: var(--danger); }
+.checks { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.checks label { display: flex; flex-direction: row; gap: 6px; align-items: center; color: var(--text); font-size: 14px; }
+.checks input { width: auto; }
+.empty { text-align: center; padding: 30px; color: var(--muted); }
+.footer { text-align: center; color: var(--muted); font-size: 13px; padding: 20px; }
+h2 { margin: 6px 0 12px; }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } .topbar { padding: 10px 16px; } }

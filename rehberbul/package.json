@@ -1,0 +1,14 @@
+{
+  "name": "rehberbul",
+  "version": "1.0.0",
+  "description": "Turistler ve seyahat acenteleri için lisanslı turist rehberi bulma ve rezervasyon platformu",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --no-warnings src/server.js",
+    "seed": "node --no-warnings src/seed.js",
+    "test": "node --no-warnings --test \"tests/*.test.js\""
+  },
+  "license": "MIT"
+}
